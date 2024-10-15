@@ -1,0 +1,37 @@
+# Compiled object files
+*.o
+*.obj
+*.dll
+*.exe
+*.pdb
+*.class
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+*.tlog
+
+# IDE
+.vscode/
+.idea/
+.vs/
+
+# Build directories
+bin/
+obj/
+out/
+Debug/
+Release/
+
+# Packages
+*.nupkg
+*.snupkg
+.packages
+
+# Visual

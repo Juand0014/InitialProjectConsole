@@ -2,11 +2,11 @@
 using System.Data.SqlClient;
 using System.Runtime.CompilerServices;
 using System.Text;
-using UContactStats.Context;
-using UContactStats.Exceptions;
-using UContactStats.Interfaces;
+using RCIInterface.Context;
+using RCIInterface.Exceptions;
+using RCIInterface.Interfaces;
 
-namespace UContactStats.Repositories;
+namespace RCIInterface.Repositories;
 
 public class OHRepository : IOHRepository
 {

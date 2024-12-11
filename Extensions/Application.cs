@@ -1,8 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using UContactStats.Feature.StoreProcedureModule.Handlers;
-using UContactStats.Feature.StoreProcedureModule.Interface;
+using RCIInterface.Feature.Handlers;
+using RCIInterface.Feature.StoreProcedureModule.Handlers;
+using RCIInterface.Feature.StoreProcedureModule.Interface;
+using RCIInterface.Interfaces.Handler;
 
-namespace UContactStats.Extensions;
+namespace RCIInterface.Extensions;
 
 public static class Application
 {
@@ -10,6 +12,7 @@ public static class Application
     {
         // Handler
         services.AddScoped<IStoreProcedureHandlers, StoreProcedureHandlers>();
+        services.AddScoped<IGetAccessTokenHandler, GetAccessTokenHandler>();
 
         return services;
     }

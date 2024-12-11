@@ -3,13 +3,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Solvex.Dynamic365.ServiceClient;
 using System.Text.Json;
-using UContactStats.Configs;
-using UContactStats.Configs.Models;
-using UContactStats.Context;
-using UContactStats.Interfaces;
-using UContactStats.Repositories;
+using RCIInterface.Configs;
+using RCIInterface.Configs.Models;
+using RCIInterface.Context;
+using RCIInterface.Interfaces;
+using RCIInterface.Repositories;
+using RCISERVICES;
 
-namespace UContactStats.Extensions;
+namespace RCIInterface.Extensions;
 
 public static class Infrastructure
 {
@@ -26,6 +27,13 @@ public static class Infrastructure
         services.AddDbContext<DBContext>(option => option.UseSqlServer(connectionString!.OHInterface_ConnectionString));
 
         services.AddScoped<IOHRepository, OHRepository>();
+
+        services.AddTransient<WSOrquestadorSoap>(provider =>
+        {
+            var endpointConfiguration = WSOrquestadorSoapClient.EndpointConfiguration.WSOrquestadorSoap;
+            var soapClient = new WSOrquestadorSoapClient(endpointConfiguration);
+            return soapClient;
+        });
 
         services.AddSingleton(dynamicsApiConfig);
         return services;

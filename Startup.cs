@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Solvex.Dynamic365.ServiceClient;
-using UContactStats.Extensions;
+using RCIInterface.Extensions;
 
-namespace UContactStats;
+namespace RCIInterface;
 
 public class Startup
 {

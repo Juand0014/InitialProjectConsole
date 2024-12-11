@@ -2,7 +2,7 @@
 using Azure.Security.KeyVault.Secrets;
 using Microsoft.Extensions.Configuration;
 
-namespace UContactStats.Configs;
+namespace RCIInterface.Configs;
 
 public class KeyVault
 {

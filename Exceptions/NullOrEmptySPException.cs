@@ -1,4 +1,4 @@
-﻿namespace UContactStats.Exceptions;
+﻿namespace RCIInterface.Exceptions;
 
 public class NullOrEmptySPException : Exception
 {

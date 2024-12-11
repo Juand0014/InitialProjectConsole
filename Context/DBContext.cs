@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Data.Entity.Infrastructure;
 
-namespace UContactStats.Context;
+namespace RCIInterface.Context;
 
 public class DBContext : DbContext
 {

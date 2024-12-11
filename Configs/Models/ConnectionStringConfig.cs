@@ -1,4 +1,4 @@
-﻿namespace UContactStats.Configs.Models;
+﻿namespace RCIInterface.Configs.Models;
 
 public class ConnectionStringsConfig
 {

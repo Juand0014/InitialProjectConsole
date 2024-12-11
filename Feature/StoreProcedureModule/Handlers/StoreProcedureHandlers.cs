@@ -1,7 +1,7 @@
-﻿using UContactStats.Feature.StoreProcedureModule.Interface;
-using UContactStats.Interfaces;
+﻿using RCIInterface.Feature.StoreProcedureModule.Interface;
+using RCIInterface.Interfaces;
 
-namespace UContactStats.Feature.StoreProcedureModule.Handlers;
+namespace RCIInterface.Feature.StoreProcedureModule.Handlers;
 
 public class StoreProcedureHandlers : IStoreProcedureHandlers
 {

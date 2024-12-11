@@ -1,4 +1,4 @@
-﻿namespace UContactStats.Feature.StoreProcedureModule.Interface;
+﻿namespace RCIInterface.Feature.StoreProcedureModule.Interface;
 
 public interface IStoreProcedureHandlers
 {

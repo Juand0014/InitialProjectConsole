@@ -1,4 +1,4 @@
-﻿namespace UContactStats.Interfaces;
+﻿namespace RCIInterface.Interfaces;
 
 public interface IOHRepository
 {

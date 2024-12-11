@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using UContactStats;
+using RCIInterface;
+using RCIInterface.Interfaces.Handler;
 
 IHostBuilder CreateHostBuilder() => 
     Host.CreateDefaultBuilder()
@@ -16,9 +18,13 @@ IHostBuilder CreateHostBuilder() =>
 try
 {
     IHost host = CreateHostBuilder().Build();
-    Console.WriteLine(host.ToString());
-    Console.WriteLine("I'm ready");
+    Console.WriteLine("Start Process..... ");
+    host.Services.GetRequiredService<IGetAccessTokenHandler>().GetAccessToken();
+
+    Console.WriteLine("Steps Begin...");
     Console.ReadLine();
+
+
 }
 catch(Exception ex)
 {
